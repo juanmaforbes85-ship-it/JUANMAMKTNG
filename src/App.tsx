@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Menu, X, Zap, Users, MessageCircle, Facebook, Instagram, Star, Crown, ArrowRight, Code, Smartphone, Lock, Check, ShoppingCart } from 'lucide-react';
+import { Menu, X, Zap, Users, MessageCircle, Facebook, Instagram, Star, Crown, ArrowRight, Code, Smartphone, Lock, Check, ShoppingCart, Heart } from 'lucide-react';
+import { WHATSAPP_NUMBER, FACEBOOK_URL, INSTAGRAM_URL } from './constants';
 
 export default function JuanmaTiendasWeb() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const whatsappNumber = '5491124620014';
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Juanma%2C%20me%20interesa%20que%20hagas%20mi%20tienda%20web%20profesional.`;
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%20Juanma%2C%20me%20interesa%20que%20hagas%20mi%20tienda%20web%20profesional.`;
 
   const handleWhatsApp = () => {
     window.open(whatsappLink, '_blank');
@@ -284,6 +284,9 @@ export default function JuanmaTiendasWeb() {
             <a href="#portfolio" className="hover:text-cyan-400 transition">Portfolio</a>
             <a href="#planes" className="hover:text-cyan-400 transition">Planes</a>
             <a href="#testimonios" className="hover:text-cyan-400 transition">Testimonios</a>
+            <a href="#/seguidores" className="flex items-center gap-1 hover:text-pink-400 transition">
+              <Heart size={16} /> Seguidores & Likes
+            </a>
             <button onClick={handleWhatsApp} className="bg-gradient-to-r from-green-500 to-emerald-600 px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-green-500/50 transition font-bold flex items-center gap-2">
               <MessageCircle size={18} /> WhatsApp
             </button>
@@ -299,6 +302,9 @@ export default function JuanmaTiendasWeb() {
             <a href="#servicios" className="block hover:text-cyan-400">Servicios</a>
             <a href="#portfolio" className="block hover:text-cyan-400">Portfolio</a>
             <a href="#planes" className="block hover:text-cyan-400">Planes</a>
+            <a href="#/seguidores" className="flex items-center gap-2 hover:text-pink-400">
+              <Heart size={16} /> Panel de Seguidores & Likes
+            </a>
             <button onClick={handleWhatsApp} className="w-full bg-gradient-to-r from-green-500 to-emerald-600 px-4 py-2 rounded text-center font-bold">Contactar</button>
           </div>
         )}
@@ -375,6 +381,27 @@ export default function JuanmaTiendasWeb() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* PROMO PANEL DE SEGUIDORES */}
+      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-8 mb-8 relative z-10">
+        <a
+          href="#/seguidores"
+          className="group relative flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl p-8 border border-pink-500/30 bg-gradient-to-r from-pink-600/20 via-purple-600/20 to-orange-500/20 backdrop-blur-xl hover:border-pink-400/60 transition"
+        >
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl">
+              <Heart className="text-white" size={28} />
+            </div>
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-white">Nuevo: Panel de Seguidores & Likes</h3>
+              <p className="text-slate-300 text-sm md:text-base">Comprá seguidores, likes y vistas para Instagram, TikTok, Facebook y YouTube. Entrega segura y sin contraseñas.</p>
+            </div>
+          </div>
+          <span className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-slate-900 font-bold px-6 py-3 rounded-xl group-hover:scale-105 transition transform">
+            Ver Panel <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
+          </span>
+        </a>
       </section>
 
       {/* VENTAJAS */}
@@ -517,10 +544,10 @@ export default function JuanmaTiendasWeb() {
               </div>
               <p className="text-slate-400 mb-6">Diseñamos tiendas web que venden. Código profesional, soporte completo.</p>
               <div className="flex gap-4">
-                <a href="https://www.facebook.com/profile.php?id=61575661468648" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition transform hover:scale-110">
+                <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-500 transition transform hover:scale-110">
                   <Facebook size={20} className="text-white" />
                 </a>
-                <a href="https://www.instagram.com/juanma.mktng" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center hover:shadow-lg hover:shadow-pink-500/50 transition transform hover:scale-110">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center hover:shadow-lg hover:shadow-pink-500/50 transition transform hover:scale-110">
                   <Instagram size={20} className="text-white" />
                 </a>
                 <button onClick={handleWhatsApp} className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center hover:bg-green-500 transition transform hover:scale-110">
@@ -536,6 +563,7 @@ export default function JuanmaTiendasWeb() {
                 <li><a href="#portfolio" className="hover:text-cyan-400 transition">→ Portfolio</a></li>
                 <li><a href="#planes" className="hover:text-cyan-400 transition">→ Planes</a></li>
                 <li><a href="#testimonios" className="hover:text-cyan-400 transition">→ Testimonios</a></li>
+                <li><a href="#/seguidores" className="hover:text-pink-400 transition">→ Seguidores & Likes</a></li>
               </ul>
             </div>
 
