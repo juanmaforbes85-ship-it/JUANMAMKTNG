@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Zap, Users, MessageCircle, Facebook, Instagram, Star, Crown, ArrowRight, Code, Smartphone, Lock, Check, ShoppingCart } from 'lucide-react';
+import { Menu, X, Zap, MessageCircle, Facebook, Instagram, Star, Newspaper, Radio, ArrowRight, Code, Smartphone, Lock, Check, ShoppingCart } from 'lucide-react';
 
 export default function JuanmaTiendasWeb() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,32 +22,32 @@ export default function JuanmaTiendasWeb() {
   // PORTAFOLIO
   const portfolio = [
     {
-      nombre: 'Tienda de Revendedor - Canva & ChatGPT',
-      tipo: 'E-commerce Completo',
-      descripcion: 'Tienda con integración de pasarela de pago, gestión de licencias y automatización.',
+      nombre: 'Tienda E-commerce',
+      tipo: 'Para Cualquier Rubro',
+      descripcion: 'Tienda online para cualquier tipo de negocio: moda, tecnología, servicios, productos digitales y más.',
       imagen: '🛒',
-      features: ['Carrito dinámico', 'Pago automático', 'Envío instantáneo', 'CRM integrado']
+      features: ['Carrito dinámico', 'Pago automático', 'Gestión de stock', 'CRM integrado']
     },
     {
-      nombre: 'Landing Page - Servicios Digitales',
-      tipo: 'Sales Funnel',
-      descripcion: 'Página de conversión con formularios, videos de demostración y testimonios.',
+      nombre: 'Landing Page Profesional',
+      tipo: 'Marcas y Freelancers',
+      descripcion: 'Página de presentación y conversión para marcas personales, freelancers y agencias de marketing.',
       imagen: '📱',
       features: ['Formularios inteligentes', 'Analytics integrado', 'A/B Testing ready', 'Integración Email']
     },
     {
-      nombre: 'Tienda Streaming - Netflix & HBO',
-      tipo: 'Membresía Recurrente',
-      descripcion: 'Plataforma con subscripciones mensuales, acceso controlado y panel de usuario.',
-      imagen: '🎬',
-      features: ['Pagos recurrentes', 'Panel de usuario', 'Acceso controlado', 'Reportes en tiempo real']
+      nombre: 'Sitio de Contenido',
+      tipo: 'Portfolios y Diarios Online',
+      descripcion: 'Sitios para mostrar tu trabajo o publicar contenido: portfolios creativos, diarios y blogs online.',
+      imagen: '📰',
+      features: ['Galería de proyectos', 'Publicación de artículos', 'SEO optimizado', 'Diseño a medida']
     },
     {
-      nombre: 'Community Hub - Revendedores',
-      tipo: 'Plataforma Social',
-      descripcion: 'Página con área de miembros, cursos, documentos y chat comunitario.',
-      imagen: '👥',
-      features: ['Área de miembros', 'Gestión de cursos', 'Recursos descargables', 'Chat en vivo']
+      nombre: 'Plataforma de Streaming',
+      tipo: 'Transmisión en Vivo',
+      descripcion: 'Sitio con reproductor en vivo, chat en tiempo real y acceso controlado para tu audiencia.',
+      imagen: '🎬',
+      features: ['Streaming en vivo', 'Chat en tiempo real', 'Acceso controlado', 'Panel de usuario']
     }
   ];
 
@@ -353,13 +353,13 @@ export default function JuanmaTiendasWeb() {
                 <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse animation-delay-200"></div>
               </div>
 
-              <h3 className="text-xl font-bold mb-6 text-cyan-300">💻 Tipos de Tiendas Web</h3>
+              <h3 className="text-xl font-bold mb-6 text-cyan-300">💻 Tipos de Sitios Web</h3>
               <div className="space-y-3">
                 {[
-                  { nombre: 'E-commerce Completo', icon: ShoppingCart, badge: '⭐ Popular' },
-                  { nombre: 'Landing Pages Profesionales', icon: Zap, badge: '🔥 Alta Conversión' },
-                  { nombre: 'Plataformas con Membresía', icon: Crown, badge: '💰 Ingresos Recurrentes' },
-                  { nombre: 'Community Hubs', icon: Users, badge: '✓ Avanzado' }
+                  { nombre: 'E-commerce para Cualquier Negocio', icon: ShoppingCart, badge: '⭐ Popular' },
+                  { nombre: 'Landing Pages: Marcas y Freelancers', icon: Zap, badge: '🔥 Alta Conversión' },
+                  { nombre: 'Portfolios y Diarios Online', icon: Newspaper, badge: '✓ A Medida' },
+                  { nombre: 'Streaming en Vivo', icon: Radio, badge: '📡 Tiempo Real' }
                 ].map((item) => (
                   <div key={item.nombre} className="flex items-center gap-3 p-4 bg-gradient-to-r from-slate-700/40 to-slate-700/20 rounded-lg border border-slate-600/50 hover:border-cyan-500/50 transition transform hover:translate-x-1">
                     <div className="p-2 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-lg">
